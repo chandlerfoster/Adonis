@@ -5,119 +5,79 @@
 
   echo "<div class='main'>";
 
+  if (isset($_POST['name'])) $name = $_POST['name'];
+  else $name = "(Not entered)";
   
-?>
+  if (isset($_POST['email'])) $email = $_POST['email'];
+  else $email = "(Not entered)";
+  
+  if (isset($_POST['cardio'])) $cardio = $_POST['cardio'];
+  else $cardio = "(Not entered)";
+  
+  if (isset($_POST['time'])) $time = $_POST['time'];
+  else $time = "(Not entered)";
+  
+  if (isset($_POST['weightlift1'])) $weightlift1 = $_POST['weightlift1'];
+  else $weightlift1 = "(Not entered)";
+  
+  if (isset($_POST['set1'])) $set1 = $_POST['set1'];
+  else $set1 = "(Not entered)";
+  
+  if (isset($_POST['rep1'])) $rep1 = $_POST['rep1'];
+  else $rep1 = "(Not entered)";
+  
+  if (isset($_POST['weightlift2'])) $weightlift2 = $_POST['weightlift2'];
+  else $weightlift2 = "(Not entered)";
+  
+  if (isset($_POST['set2'])) $set2 = $_POST['set2'];
+  else $set2 = "(Not entered)";
+  
+  if (isset($_POST['rep2'])) $rep2 = $_POST['rep2'];
+  else $rep2 = "(Not entered)";
+  
+  if (isset($_POST['weightlift3'])) $weightlift3 = $_POST['weightlift3'];
+  else $weightlift3 = "(Not entered)";
+  
+  if (isset($_POST['set3'])) $set3 = $_POST['set3'];
+  else $set3 = "(Not entered)";
+  
+  if (isset($_POST['rep3'])) $rep3 = $_POST['rep3'];
+  else $rep3 = "(Not entered)";
+  
+  if (isset($_POST['technique'])) $technique = $_POST['technique'];
+  else $technique = "(Not entered)";
+  
+  if (isset($_POST['sets'])) $sets = $_POST['sets'];
+  else $sets = "(Not entered)";
+  
+  if (isset($_POST['reps'])) $reps = $_POST['reps'];
+  else $reps = "(Not entered)";
 
-Customize your very own workout by selecting the options below!
-<form action="plan.php" method="post">
-Name:  <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-Cardio: <select name="cardio" id="cardio">
-    <option value="tread">Treadmill</option>
-    <option value="bike">Spin Bicycle</option>
-    <option value="elliptical">Elliptical</option>
-</select>
-Time (mins):
-<select name="set" id="set">
-    <option value="1">10</option>
-    <option value="2">15</option>
-    <option value="3">30</option>
-    <option value="3">45</option>
-    <option value="3">60</option>
-</select>
-
-<br>
-Weightlift 1:<select name="workout" id="workout">
-    <option value="bench">Flat Bench Press</option>
-    <option value="squat">Squat</option>
-    <option value="deadlift">Deadlift</option>
-</select>
-Sets:
-<select name="set" id="set">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="3">4</option>
-    <option value="3">5</option>
-</select>
-Number of Reps:
-<select name="set" id="set">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="3">4</option>
-    <option value="3">5</option>
-    <option value="3">6</option>
-    <option value="3">7</option>
-    <option value="3">8</option>
-    <option value="3">9</option>
-    <option value="3">10</option>
-    <option value="3">11</option>
-    <option value="3">12</option>
-</select>
-<br>
-Weightlift 2:<select name="workout" id="workout">
-    <option value="incline">Incline Bench Press</option>
-    <option value="gm">Good Mornings</option>
-    <option value="romanian">Romanian Deadlift</option>
-</select>
-Sets:
-<select name="set" id="set">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="3">4</option>
-    <option value="3">5</option>
-</select>
-Number of Reps:
-<select name="set" id="set">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="3">4</option>
-    <option value="3">5</option>
-    <option value="3">6</option>
-    <option value="3">7</option>
-    <option value="3">8</option>
-    <option value="3">9</option>
-    <option value="3">10</option>
-    <option value="3">11</option>
-    <option value="3">12</option>
-</select>
-<br>
-Weightlift 3:<select name="workout" id="workout">
-    <option value="dumbbellflys">Dumbbell Flys</option>
-    <option value="lunges">Lunges</option>
-    <option value="oneleg">1 legged deadlift</option>
-</select>
-Sets:
-<select name="set" id="set">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="3">4</option>
-    <option value="3">5</option>
-</select>
-Number of Reps:
-<select name="set" id="set">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="3">4</option>
-    <option value="3">5</option>
-    <option value="3">6</option>
-    <option value="3">7</option>
-    <option value="3">8</option>
-    <option value="3">9</option>
-    <option value="3">10</option>
-    <option value="3">11</option>
-    <option value="3">12</option>
-</select>
-<br>
-<input type="reset" name="reset">
-<input type="submit">
-</form>
-
-    </ul></div>
+  echo <<<_END
+<html>
+    <head>
+      <title>test </title>
+    </head>
+    <body>
+        See your plan below: <br>
+     Your plan name is: $name<br>
+    Email: $email<br>
+    Cardio: $cardio<br>
+    Time: $time<br>
+    Weightlifting 1: $weightlift1<br>
+    Set 1: $set1<br>
+    Rep 1: $rep1<br>
+    Weightlifting 2: $weightlift2<br>
+    Set 2: $set2<br>
+    Rep 2: $rep2<br>
+    Weightlifting 3: $weightlift3<br>
+    Set 3: $set3<br>
+    Rep 3: $rep3<br>
+    Technique 1: $technique Sets 1: $sets Reps 1: $reps<br> 
+    </body>
+  </html>
+  </ul></div>
   </body>
 </html>
+_END;
+?>
